@@ -1,0 +1,37 @@
+	<style>
+		.ui-bar-a {
+			border: 1px solid #550000;
+			background: #111;
+			color: white;
+			font-weight: bold;
+			text-shadow: 0 -1px 1px black;
+			background-image: -webkit-linear-gradient(#FF0000,#440000);
+		}
+
+		.ui-btn-up-a {
+			border: 1px solid #550000;
+			background: #333;
+			font-weight: bold;
+			color: white;
+			text-shadow: 0 -1px 1px black;
+			background-image: -webkit-linear-gradient(#FF0000,#440000);
+		}
+		.ui-btn-down-a {
+			border: 1px solid #550000;
+			background: #333;
+			font-weight: bold;
+			color: white;
+			text-shadow: 0 -1px 1px black;
+			background-image: -webkit-linear-gradient(#550000,#550000);
+		}
+
+		.ui-btn-hover-a {
+			border: 1px solid #550000;
+			background: #333;
+			font-weight: bold;
+			color: white;
+			text-shadow: 0 -1px 1px black;
+			background-image: -webkit-linear-gradient(#550000,#550000);
+		}
+
+	</style>
