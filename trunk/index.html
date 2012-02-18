@@ -3,7 +3,7 @@
 	<head> 
 	<title>OpenOffice.org</title> 
 	<meta name="viewport" content="width=device-width, initial-scale=1"> 
-	<link rel="stylesheet" href="jquery/jquery.mobile-1.0.1.min.css" />
+	<link rel="stylesheet" href="jquery/jquery.mobile-1.0.1.css" />
 	<link rel="stylesheet" href="mobile.css" />
 	<script src="http://maps.google.com/maps/api/js?sensor=true" type="text/javascript"></script>
 	<script src="jquery/jquery-1.7.1.min.js"></script>
@@ -14,9 +14,11 @@
 <body> 
 
 <!--  page overview -->
-<div data-role="page" id="overview" >
-	<div data-role="header">
-		<h1>Overview</h1>
+<div data-role="page" id="overview" data-theme="p">
+	<div data-role="header" data-theme="p">
+		<a href="index.html#info" rel="external" data-icon="info" data-iconpos="notext" ></a>
+      <h1>Overview</h1>
+      <a href="#writer" rel="external" data-icon="arrow-r" data-iconpos="notext" ></a>
 	</div><!-- /header -->
 	<div data-role="content">
 		<ul class="overview"></ul>
@@ -41,9 +43,11 @@
  </div><!-- /page -->
 
 <!--  page writer -->
-<div data-role="page" id="writer" >
-	<div data-role="header">
-		<h1>Writer</h1>
+<div data-role="page" id="writer" data-theme="p">
+	<div data-role="header" data-theme="p">
+		<a href="#overview" rel="external" data-icon="arrow-l" data-iconpos="notext" ></a>
+      <h1>Writer</h1>
+      <a href="#calc" rel="external" data-icon="arrow-r" data-iconpos="notext" ></a>
 	</div><!-- /header -->
 	<div data-role="content">
 		<ul class="writer"></ul>
@@ -68,9 +72,11 @@
  </div><!-- /page -->
 
 <!--  page calc -->
-<div data-role="page" id="calc" >
-	<div data-role="header">
-		<h1>Calc</h1>
+<div data-role="page" id="calc" data-theme="p">
+	<div data-role="header" data-theme="p">
+		<a href="#writer" rel="external" data-icon="arrow-l" data-iconpos="notext" ></a>
+      <h1>Calc</h1>
+      <a href="#impress" rel="external" data-icon="arrow-r" data-iconpos="notext" ></a>
 	</div><!-- /header -->
 	<div data-role="content">
 		<ul class="calc"></ul>
@@ -95,9 +101,11 @@
  </div><!-- /page -->
 
 <!--  page impress -->
-<div data-role="page" id="impress" >
-	<div data-role="header">
+<div data-role="page" id="impress" data-theme="p">
+	<div data-role="header" data-theme="p">
+      <a href="#calc" rel="external" data-icon="arrow-l" data-iconpos="notext" ></a>
 		<h1>Impress</h1>
+      <a href="#base" rel="external" data-icon="arrow-r" data-iconpos="notext" ></a>
 	</div><!-- /header -->
 	<div data-role="content">
 		<ul class="impress"></ul>
@@ -122,9 +130,11 @@
  </div><!-- /page -->
 
 <!--  page base -->
-<div data-role="page" id="base" >
-	<div data-role="header">
+<div data-role="page" id="base" data-theme="p">
+	<div data-role="header" data-theme="p">
+      <a href="#impress" rel="external" data-icon="arrow-l" data-iconpos="notext" ></a>
 		<h1>Base</h1>
+      <a href="#math" rel="external" data-icon="arrow-r" data-iconpos="notext" ></a>
 	</div><!-- /header -->
 	<div data-role="content">
 		<ul class="base"></ul>
@@ -149,9 +159,11 @@
  </div><!-- /page -->
 
 <!--  page math -->
-<div data-role="page" id="math" >
-	<div data-role="header">
+<div data-role="page" id="math" data-theme="p">
+	<div data-role="header" data-theme="p">
+      <a href="#base" rel="external" data-icon="arrow-l" data-iconpos="notext" ></a>
 		<h1>Math</h1>
+      <a href="#draw" rel="external" data-icon="arrow-r" data-iconpos="notext" ></a>
 	</div><!-- /header -->
 	<div data-role="content">
 		<ul class="math"></ul>
@@ -176,9 +188,11 @@
  </div><!-- /page -->
 
 <!--  page draw -->
-<div data-role="page" id="draw" >
-	<div data-role="header">
+<div data-role="page" id="draw" data-theme="p">
+	<div data-role="header" data-theme="p">
+      <a href="#math" rel="external" data-icon="arrow-l" data-iconpos="notext" ></a>
 		<h1>Draw</h1>
+      <a href="#marcro" rel="external" data-icon="arrow-r" data-iconpos="notext" ></a>
 	</div><!-- /header -->
 	<div data-role="content">
 		<ul class="draw"></ul>
@@ -203,9 +217,11 @@
  </div><!-- /page -->
 
 <!--  page marcro -->
-<div data-role="page" id="marcro" >
-	<div data-role="header">
+<div data-role="page" id="marcro" data-theme="p">
+	<div data-role="header" data-theme="p">
+      <a href="#draw" rel="external" data-icon="arrow-l" data-iconpos="notext" ></a>
 		<h1>Marcro</h1>
+       <a href="#overview" rel="external" data-icon="arrow-r" data-iconpos="notext" ></a>
 	</div><!-- /header -->
 	<div data-role="content">
 		<ul class="marcro"></ul>
@@ -228,6 +244,16 @@
 		</script>
 	</div><!-- /content -->
  </div><!-- /page -->
+
+<div data-role="dialog" id="info" >
+	<div data-role="header" data-theme="p">
+		<h1>Info</a>
+	</div><!-- /header -->
+	<div data-role="content" style="text-align:center;">
+		<img src="icon/OOo_Application_128x128.png">
+		<p>OpenOffice.org video tutorial supported by Software Industry Promotion Agency (Public Organization). a.k.a SIPA. You can find more tutorial in <b>sipaopensource</b> youtube channel.</p>
+	</div><!-- /content -->
+</div><!-- /page -->
 
 </body>
 </html>
