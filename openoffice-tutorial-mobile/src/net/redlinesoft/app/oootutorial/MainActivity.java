@@ -3,8 +3,10 @@ package net.redlinesoft.app.oootutorial;
 import net.redlinesoft.app.oootutorial.R;
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.content.res.Configuration;
 import android.net.ConnectivityManager;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.KeyEvent;
 import android.view.Window;
@@ -41,16 +43,19 @@ public class MainActivity extends Activity {
 					String description, String failingUrl) {
 				// Handle the error
 				webView.loadUrl("file:///android_asset/www/notconnect.html");
-				Toast.makeText(getApplicationContext(), description,Toast.LENGTH_LONG).show();
-			}
+			}			
 		});
 
 		webView.setWebViewClient(new WebViewClient() {
 			@Override
 			public boolean shouldOverrideUrlLoading(WebView view, String url) {
-				view.loadUrl(url);
+				if (url.startsWith("vnd.youtube:")) {
+				    String youtubeUrl = "http://www.youtube.com/watch?v=" + url.replace("vnd.youtube:", "");
+				    startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(youtubeUrl)));
+				}
 				return true;
 			}
+
 		});
 
 		webView.setWebChromeClient(new WebChromeClient() {
@@ -77,6 +82,8 @@ public class MainActivity extends Activity {
 			webView.loadUrl("file:///android_asset/www/notconnect.html");
 		}
 	}
+	
+	
 
 	@Override
 	public void onConfigurationChanged(Configuration newConfig) {
